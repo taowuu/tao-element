@@ -4,21 +4,33 @@ import {
   createWebHistory,
   RouteRecordRaw,
 } from 'vue-router'
+
 import Home from '../views/Home.vue'
+import Container from '../components/container/src/index.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
-    meta: {
-      title: '首页'
-    }
+    component: Container,
+    children: [
+      {
+        path: '/',
+        component: Home,
+      },
+      {
+        path: '/chooseIcon',
+        component: () => import('../views/chooseIcon/index.vue'),
+      },
+      {
+        path: '/chooseArea',
+        component: () => import('../views/chooseArea/index.vue'),
+      },
+    ]
   },
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 })
 

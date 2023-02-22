@@ -3,8 +3,6 @@
 </template>
 
 <style lang="scss">
-* {
-  margin: 0;
-  padding: 0;
-}
+@import "./styles/ui";
+@import "./styles/common";
 </style>
