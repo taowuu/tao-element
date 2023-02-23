@@ -11,7 +11,7 @@
 
 <script setup lang='ts'>
 import { ref } from 'vue'
-import ChooseIcon from '../../components/chooseIcon/src/index.vue'
+// import ChooseIcon from '../../components/chooseIcon/src/index.vue'
 
 let visible = ref<boolean>(false)
 
